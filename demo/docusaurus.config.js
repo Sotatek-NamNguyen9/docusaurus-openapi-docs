@@ -62,6 +62,11 @@ const config = {
             label: "Docs",
           },
           {
+            position: "left",
+            label: "Aptos API",
+            to: "/category/aptos-api",
+          },
+          {
             type: "dropdown",
             label: "Demos",
             position: "left",
@@ -254,6 +259,10 @@ const config = {
           yogurt: {
             specPath: "examples/food/yogurtstore/openapi.yaml",
             outputDir: "docs/food/yogurtstore",
+          },
+          blocklen: {
+            specPath: "examples/blocklen.json",
+            outputDir: "docs/blocklen",
           },
         },
       },
