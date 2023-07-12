@@ -63,7 +63,7 @@ const config = {
           },
           {
             position: "left",
-            label: "Aptos API",
+            label: "Blocklens",
             to: "/category/aptos-api",
           },
           {
@@ -263,6 +263,9 @@ const config = {
           blocklen: {
             specPath: "examples/blocklen.json",
             outputDir: "docs/blocklen",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
           },
         },
       },
