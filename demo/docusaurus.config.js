@@ -5,7 +5,7 @@ const { DOCUSAURUS_VERSION } = require("@docusaurus/utils");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Docusaurus OpenAPI Docs",
+  title: "Blocklens API Docs",
   tagline: "OpenAPI plugin for generating API reference docs in Docusaurus v2",
   url: "https://docusaurus-openapi.tryingpan.dev",
   baseUrl: "/",
@@ -49,7 +49,7 @@ const config = {
         },
       },
       navbar: {
-        title: "OpenAPI Docs",
+        title: "Blocklens API Docs",
         logo: {
           alt: "Keytar",
           src: "img/docusaurus-openapi-docs-logo.svg",
@@ -59,28 +59,7 @@ const config = {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Docs",
-          },
-          {
-            type: "dropdown",
-            label: "Demos",
-            position: "left",
-            items: [
-              {
-                label: "API Zoo",
-                to: "/category/petstore-api",
-              },
-              {
-                label: "Petstore (versioned)",
-                to: "/category/petstore-versioned-api",
-              },
-            ],
-          },
-          {
-            href: "https://medium.com/palo-alto-networks-developer-blog",
-            position: "right",
-            className: "header-medium-link",
-            "aria-label": "Palo Alto Networks Developer Blog",
+            label: "Web3 Data API",
           },
           {
             href: "https://github.com/PaloAltoNetworks/docusaurus-openapi-docs",
@@ -133,7 +112,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Palo Alto Networks, Inc. Built with Docusaurus ${DOCUSAURUS_VERSION}.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Blocklens. Built with Docusaurus ${DOCUSAURUS_VERSION}.`,
       },
       prism: {
         additionalLanguages: ["ruby", "csharp", "php", "java", "powershell"],
@@ -208,52 +187,27 @@ const config = {
         id: "openapi",
         docsPluginId: "classic",
         config: {
-          petstore_versioned: {
-            specPath: "examples/petstore.yaml",
-            outputDir: "docs/petstore_versioned", // No trailing slash
+          aptos: {
+            specPath: "examples/aptos.json",
+            outputDir: "docs/aptos",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
             },
-            version: "2.0.0", // Current version
-            label: "v2.0.0", // Current version label
-            baseUrl: "/petstore_versioned/swagger-petstore-yaml", // Leading slash is important
-            versions: {
-              "1.0.0": {
-                specPath: "examples/petstore-1.0.0.yaml",
-                outputDir: "docs/petstore_versioned/1.0.0", // No trailing slash
-                label: "v1.0.0",
-                baseUrl: "/petstore_versioned/1.0.0/swagger-petstore-yaml", // Leading slash is important
-              },
-            },
           },
-          petstore: {
-            specPath: "examples/petstore.yaml",
-            proxy: "https://cors.pan.dev",
-            outputDir: "docs/petstore",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-              categoryLinkSource: "tag",
-            },
-            template: "api.mustache", // Customize API MDX with mustache template
-            downloadUrl:
-              "https://raw.githubusercontent.com/PaloAltoNetworks/docusaurus-openapi-docs/main/demo/examples/petstore.yaml",
-            hideSendButton: false,
-          },
-          cos: {
-            specPath: "examples/openapi-cos.json",
-            outputDir: "docs/cos",
+          evm: {
+            specPath: "examples/evm.json",
+            outputDir: "docs/evm",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           },
-          burgers: {
-            specPath: "examples/food/burgers/openapi.yaml",
-            outputDir: "docs/food/burgers",
-          },
-          yogurt: {
-            specPath: "examples/food/yogurtstore/openapi.yaml",
-            outputDir: "docs/food/yogurtstore",
+          sui: {
+            specPath: "examples/sui.json",
+            outputDir: "docs/sui",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
           },
         },
       },
