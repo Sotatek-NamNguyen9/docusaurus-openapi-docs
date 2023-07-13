@@ -12,18 +12,14 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -39,11 +35,7 @@
           }
         },
         "tags": ["Get blocks"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/block/blockFromTimeToTime": {
@@ -57,36 +49,28 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "from_time",
             "required": true,
             "in": "query",
             "description": "From timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_time",
             "required": true,
             "in": "query",
             "description": "To timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -105,11 +89,7 @@
           }
         },
         "tags": ["Get blocks"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/block/blockFromNumToNum": {
@@ -123,18 +103,14 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "from_block",
@@ -142,9 +118,7 @@
             "in": "query",
             "description": "The minimum block number from which to get the transfers",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_block",
@@ -152,9 +126,7 @@
             "in": "query",
             "description": "The maximum block number from which to get the transfers",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -173,11 +145,7 @@
           }
         },
         "tags": ["Get blocks"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/block/hash/{block_hash}": {
@@ -190,9 +158,7 @@
             "name": "block_hash",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -200,19 +166,13 @@
             "description": "200 Successful",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseBlockDto"
-                }
+                "schema": { "$ref": "#/components/schemas/BaseBlockDto" }
               }
             }
           }
         },
         "tags": ["Get blocks"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/block/height/{block_height}": {
@@ -225,9 +185,7 @@
             "name": "block_height",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -235,19 +193,13 @@
             "description": "200 Successful",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseBlockDto"
-                }
+                "schema": { "$ref": "#/components/schemas/BaseBlockDto" }
               }
             }
           }
         },
         "tags": ["Get blocks"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/block/version/{version}": {
@@ -260,9 +212,7 @@
             "name": "version",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -270,19 +220,13 @@
             "description": "200 Successful",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseBlockDto"
-                }
+                "schema": { "$ref": "#/components/schemas/BaseBlockDto" }
               }
             }
           }
         },
         "tags": ["Get blocks"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/event": {
@@ -296,18 +240,14 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -317,20 +257,14 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ListLogResponseDto"
-                  }
+                  "items": { "$ref": "#/components/schemas/ListLogResponseDto" }
                 }
               }
             }
           }
         },
         "tags": ["Get events"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/event/eventFromBlockToBlock": {
@@ -345,9 +279,7 @@
             "in": "query",
             "description": "The minimum block number from which to get the transfers",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_block",
@@ -355,27 +287,21 @@
             "in": "query",
             "description": "The maximum block number from which to get the transfers",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -385,20 +311,14 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ListLogResponseDto"
-                  }
+                  "items": { "$ref": "#/components/schemas/ListLogResponseDto" }
                 }
               }
             }
           }
         },
         "tags": ["Get events"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/event/eventFromTimeToTime": {
@@ -412,36 +332,28 @@
             "required": true,
             "in": "query",
             "description": "From timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_time",
             "required": true,
             "in": "query",
             "description": "To timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -451,20 +363,14 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ListLogResponseDto"
-                  }
+                  "items": { "$ref": "#/components/schemas/ListLogResponseDto" }
                 }
               }
             }
           }
         },
         "tags": ["Get events"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/event/eventFromVersionToVersion": {
@@ -479,9 +385,7 @@
             "in": "query",
             "description": "The minimum version number",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_version",
@@ -489,27 +393,21 @@
             "in": "query",
             "description": "The maximum version number",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -519,20 +417,14 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ListLogResponseDto"
-                  }
+                  "items": { "$ref": "#/components/schemas/ListLogResponseDto" }
                 }
               }
             }
           }
         },
         "tags": ["Get events"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/nft": {
@@ -546,45 +438,35 @@
             "required": false,
             "in": "query",
             "description": "Collection name of NFT",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "creator_address",
             "required": false,
             "in": "query",
             "description": "Creator address of NFT",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "name",
             "required": false,
             "in": "query",
             "description": "NFT name",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -592,19 +474,13 @@
             "description": "200 Successful",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ListNftResponseDto"
-                }
+                "schema": { "$ref": "#/components/schemas/ListNftResponseDto" }
               }
             }
           }
         },
         "tags": ["Get NFTs"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/nft/nftsOfCollection/{collectionDataIdHash}": {
@@ -618,26 +494,20 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "collectionDataIdHash",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -645,19 +515,13 @@
             "description": "200 Successful",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ListNftResponseDto"
-                }
+                "schema": { "$ref": "#/components/schemas/ListNftResponseDto" }
               }
             }
           }
         },
         "tags": ["Get NFTs"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/collection": {
@@ -671,18 +535,14 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -698,11 +558,7 @@
           }
         },
         "tags": ["Get NFT collections"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/nft-activity": {
@@ -716,18 +572,14 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -743,11 +595,7 @@
           }
         },
         "tags": ["Get NFT activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/nft-activity/nftActivitiesByBlock/{block_height}": {
@@ -761,26 +609,20 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "block_height",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -796,11 +638,7 @@
           }
         },
         "tags": ["Get NFT activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/nft-activity/nftActivitiesFromBlockToBlock": {
@@ -814,18 +652,14 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "from_block",
@@ -833,9 +667,7 @@
             "in": "query",
             "description": "The minimum block number from which to get the transfers",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_block",
@@ -843,9 +675,7 @@
             "in": "query",
             "description": "The maximum block number from which to get the transfers",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -861,11 +691,7 @@
           }
         },
         "tags": ["Get NFT activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/nft-activity/nftActivitiesFromTimeToTime": {
@@ -879,36 +705,28 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "from_time",
             "required": true,
             "in": "query",
             "description": "From timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_time",
             "required": true,
             "in": "query",
             "description": "To timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -924,11 +742,7 @@
           }
         },
         "tags": ["Get NFT activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/nft-activity/nftActivitiesOfCollection/{collection}": {
@@ -941,27 +755,21 @@
             "name": "collection",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -977,11 +785,7 @@
           }
         },
         "tags": ["Get NFT activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/nft-activity/nftActivitiesByBlock/{collection}/{block_height}": {
@@ -995,34 +799,26 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "block_height",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "collection",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1038,11 +834,7 @@
           }
         },
         "tags": ["Get NFT activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/nft-activity/nftActivitiesFromBlockToBlock/{collection}": {
@@ -1056,18 +848,14 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "from_block",
@@ -1075,9 +863,7 @@
             "in": "query",
             "description": "The minimum block number from which to get the transfers",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_block",
@@ -1085,17 +871,13 @@
             "in": "query",
             "description": "The maximum block number from which to get the transfers",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "collection",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1111,11 +893,7 @@
           }
         },
         "tags": ["Get NFT activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/nft-activity/nftActivitiesFromTimeToTime/{collection}": {
@@ -1129,44 +907,34 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "from_time",
             "required": true,
             "in": "query",
             "description": "From timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_time",
             "required": true,
             "in": "query",
             "description": "To timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "collection",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1182,11 +950,7 @@
           }
         },
         "tags": ["Get NFT activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/transactions": {
@@ -1200,18 +964,14 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1230,11 +990,7 @@
           }
         },
         "tags": ["Get transactions"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/transactions/txFromBlockToBlock": {
@@ -1249,9 +1005,7 @@
             "in": "query",
             "description": "The minimum block number from which to get the transfers",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_block",
@@ -1259,27 +1013,21 @@
             "in": "query",
             "description": "The maximum block number from which to get the transfers",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1298,11 +1046,7 @@
           }
         },
         "tags": ["Get transactions"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/transactions/txFromTimeToTime": {
@@ -1316,36 +1060,28 @@
             "required": true,
             "in": "query",
             "description": "From timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_time",
             "required": true,
             "in": "query",
             "description": "To timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1364,11 +1100,7 @@
           }
         },
         "tags": ["Get transactions"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/transactions/txFromVersionToVersion": {
@@ -1383,9 +1115,7 @@
             "in": "query",
             "description": "The minimum version number",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_version",
@@ -1393,27 +1123,21 @@
             "in": "query",
             "description": "The maximum version number",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1432,11 +1156,7 @@
           }
         },
         "tags": ["Get transactions"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/transactions/hash/{hash}": {
@@ -1449,9 +1169,7 @@
             "name": "hash",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1467,11 +1185,7 @@
           }
         },
         "tags": ["Get transactions"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/transactions/version/{version}": {
@@ -1484,9 +1198,7 @@
             "name": "version",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1502,11 +1214,7 @@
           }
         },
         "tags": ["Get transactions"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/transactions/block/{block_height}": {
@@ -1519,9 +1227,7 @@
             "name": "block_height",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1540,11 +1246,7 @@
           }
         },
         "tags": ["Get transactions"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/transactions/type/{type}": {
@@ -1557,9 +1259,7 @@
             "name": "type",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1578,11 +1278,7 @@
           }
         },
         "tags": ["Get transactions"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-payloads": {
@@ -1596,18 +1292,14 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1626,11 +1318,7 @@
           }
         },
         "tags": ["Get transaction payloads"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-payloads/txPayloadFromBlockToBlock": {
@@ -1645,9 +1333,7 @@
             "in": "query",
             "description": "The minimum block number from which to get the transfers",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_block",
@@ -1655,27 +1341,21 @@
             "in": "query",
             "description": "The maximum block number from which to get the transfers",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1694,11 +1374,7 @@
           }
         },
         "tags": ["Get transaction payloads"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-payloads/txPayloadFromTimeToTime": {
@@ -1712,36 +1388,28 @@
             "required": true,
             "in": "query",
             "description": "From timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_time",
             "required": true,
             "in": "query",
             "description": "To timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1760,11 +1428,7 @@
           }
         },
         "tags": ["Get transaction payloads"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-payloads/txPayloadFromVersionToVersion": {
@@ -1779,9 +1443,7 @@
             "in": "query",
             "description": "The minimum version number",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_version",
@@ -1789,27 +1451,21 @@
             "in": "query",
             "description": "The maximum version number",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1828,11 +1484,7 @@
           }
         },
         "tags": ["Get transaction payloads"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-signatures": {
@@ -1846,18 +1498,14 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1876,11 +1524,7 @@
           }
         },
         "tags": ["Get transaction signatures"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-signatures/txSignatureFromBlockToBlock": {
@@ -1895,9 +1539,7 @@
             "in": "query",
             "description": "The minimum block number from which to get the transfers",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_block",
@@ -1905,27 +1547,21 @@
             "in": "query",
             "description": "The maximum block number from which to get the transfers",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -1944,11 +1580,7 @@
           }
         },
         "tags": ["Get transaction signatures"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-signatures/txSignatureFromTimeToTime": {
@@ -1962,36 +1594,28 @@
             "required": true,
             "in": "query",
             "description": "From timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_time",
             "required": true,
             "in": "query",
             "description": "To timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2010,11 +1634,7 @@
           }
         },
         "tags": ["Get transaction signatures"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-signatures/txSignatureFromVersionToVersion": {
@@ -2029,9 +1649,7 @@
             "in": "query",
             "description": "The minimum version number",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_version",
@@ -2039,27 +1657,21 @@
             "in": "query",
             "description": "The maximum version number",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2078,11 +1690,7 @@
           }
         },
         "tags": ["Get transaction signatures"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-changes/{transaction_hash}": {
@@ -2095,27 +1703,21 @@
             "name": "transaction_hash",
             "required": true,
             "in": "path",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2134,11 +1736,7 @@
           }
         },
         "tags": ["Get transaction changes"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-changes/txChangeFromBlockToBlock": {
@@ -2153,9 +1751,7 @@
             "in": "query",
             "description": "The minimum block number from which to get the transfers",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_block",
@@ -2163,27 +1759,21 @@
             "in": "query",
             "description": "The maximum block number from which to get the transfers",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2202,11 +1792,7 @@
           }
         },
         "tags": ["Get transaction changes"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-changes/txChangeFromTimeToTime": {
@@ -2220,36 +1806,28 @@
             "required": true,
             "in": "query",
             "description": "From timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_time",
             "required": true,
             "in": "query",
             "description": "To timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2268,11 +1846,7 @@
           }
         },
         "tags": ["Get transaction changes"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/tx-changes/txChangeFromVersionToVersion": {
@@ -2287,9 +1861,7 @@
             "in": "query",
             "description": "The minimum version number",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_version",
@@ -2297,27 +1869,21 @@
             "in": "query",
             "description": "The maximum version number",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2336,11 +1902,7 @@
           }
         },
         "tags": ["Get transaction changes"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/coin": {
@@ -2354,36 +1916,28 @@
             "required": false,
             "in": "query",
             "description": "Coin Type",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "creator_address",
             "required": false,
             "in": "query",
             "description": "Creator Address",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2402,11 +1956,7 @@
           }
         },
         "tags": ["Get tokens"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/coin-activity": {
@@ -2420,18 +1970,14 @@
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2450,11 +1996,7 @@
           }
         },
         "tags": ["Get token activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/coin-activity/activityByBlock": {
@@ -2468,27 +2010,21 @@
             "required": true,
             "in": "query",
             "description": "Block height",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2507,11 +2043,7 @@
           }
         },
         "tags": ["Get token activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/coin-activity/activityFromBlockToBlock": {
@@ -2526,9 +2058,7 @@
             "in": "query",
             "description": "The minimum block number from which to get the transfers",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_block",
@@ -2536,27 +2066,21 @@
             "in": "query",
             "description": "The maximum block number from which to get the transfers",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2575,11 +2099,7 @@
           }
         },
         "tags": ["Get token activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/coin-activity/activityFromTimeToTime": {
@@ -2593,36 +2113,28 @@
             "required": true,
             "in": "query",
             "description": "From timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_time",
             "required": true,
             "in": "query",
             "description": "To timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2641,11 +2153,7 @@
           }
         },
         "tags": ["Get token activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/coin-activity/activityByType": {
@@ -2659,27 +2167,21 @@
             "required": true,
             "in": "query",
             "description": "Coin type",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2698,11 +2200,7 @@
           }
         },
         "tags": ["Get token activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/coin-activity/activityByTypeAndBlock": {
@@ -2716,36 +2214,28 @@
             "required": true,
             "in": "query",
             "description": "Coin type",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "block_height",
             "required": true,
             "in": "query",
             "description": "Block height",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2764,11 +2254,7 @@
           }
         },
         "tags": ["Get token activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/coin-activity/activityOfTypeFromBlockToBlock": {
@@ -2782,9 +2268,7 @@
             "required": true,
             "in": "query",
             "description": "Coin type",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "from_block",
@@ -2792,9 +2276,7 @@
             "in": "query",
             "description": "The minimum block number from which to get the transfers",
             "example": 999,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_block",
@@ -2802,27 +2284,21 @@
             "in": "query",
             "description": "The maximum block number from which to get the transfers",
             "example": 1000,
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2841,11 +2317,7 @@
           }
         },
         "tags": ["Get token activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     },
     "/v1/coin-activity/activityOfTypeFromTimeToTime": {
@@ -2859,45 +2331,35 @@
             "required": true,
             "in": "query",
             "description": "Coin type",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "from_time",
             "required": true,
             "in": "query",
             "description": "From timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "to_time",
             "required": true,
             "in": "query",
             "description": "To timestamp",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "limit",
             "required": false,
             "in": "query",
             "description": "Number of item displayed per page, default: 10",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           },
           {
             "name": "offset",
             "required": false,
             "in": "query",
             "description": "Number of skipped item, default: 0",
-            "schema": {
-              "type": "number"
-            }
+            "schema": { "type": "number" }
           }
         ],
         "responses": {
@@ -2916,11 +2378,7 @@
           }
         },
         "tags": ["Get token activities"],
-        "security": [
-          {
-            "apiKey": []
-          }
-        ]
+        "security": [{ "apiKey": [] }]
       }
     }
   },
@@ -2933,26 +2391,15 @@
   "tags": [],
   "servers": [
     {
-      "url": "http://localhost:3003",
-      "description": "Aptos Local Server"
+      "url": "https://aptos-mainnet-api.blocklens.io",
+      "description": "Aptos Mainnet Dev Server"
     }
   ],
   "components": {
     "securitySchemes": {
-      "bearer": {
-        "scheme": "bearer",
-        "bearerFormat": "JWT",
-        "type": "http"
-      },
-      "basic": {
-        "type": "http",
-        "scheme": "basic"
-      },
-      "apiKey": {
-        "type": "apiKey",
-        "name": "X-API-KEY",
-        "in": "header"
-      }
+      "bearer": { "scheme": "bearer", "bearerFormat": "JWT", "type": "http" },
+      "basic": { "type": "http", "scheme": "basic" },
+      "apiKey": { "type": "apiKey", "name": "X-API-KEY", "in": "header" }
     },
     "schemas": {
       "BaseBlockDto": {
@@ -3005,9 +2452,7 @@
           "data": {
             "description": "Blocks",
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BaseBlockDto"
-            }
+            "items": { "$ref": "#/components/schemas/BaseBlockDto" }
           }
         },
         "required": ["data"]
@@ -3090,7 +2535,7 @@
             "nullable": true
           },
           "data": {
-            "type": "object",
+            "type": "string",
             "example": "{\"amount\": \"11385\"}",
             "description": "data"
           }
@@ -3119,9 +2564,7 @@
           "data": {
             "description": "Array of documents",
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LogResponseDto"
-            }
+            "items": { "$ref": "#/components/schemas/LogResponseDto" }
           }
         },
         "required": ["data"]
@@ -3209,9 +2652,7 @@
           "data": {
             "description": "Nfts",
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BaseNftDto"
-            }
+            "items": { "$ref": "#/components/schemas/BaseNftDto" }
           }
         },
         "required": ["data"]
@@ -3259,11 +2700,7 @@
             "example": "https://aptosnames.com",
             "description": "metadataUri"
           },
-          "supply": {
-            "type": "number",
-            "example": 0,
-            "description": "supply"
-          },
+          "supply": { "type": "number", "example": 0, "description": "supply" },
           "table_handle": {
             "type": "string",
             "example": "0x5a608d04222bd2de8c9fe6ddc7bc277c390cbc87bdf2688fcdb513b34179fe69",
@@ -3307,9 +2744,7 @@
           "data": {
             "description": "Collections",
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BaseCollectionDto"
-            }
+            "items": { "$ref": "#/components/schemas/BaseCollectionDto" }
           }
         },
         "required": ["data"]
@@ -3332,10 +2767,7 @@
             "type": "string",
             "description": "block_time"
           },
-          "timestamp": {
-            "type": "number",
-            "description": "timestamp"
-          },
+          "timestamp": { "type": "number", "description": "timestamp" },
           "token_data_id_hash": {
             "type": "string",
             "example": "09e63a48047b1c2bc51c0abc4b67ffcd9922e0adc99a6cc36532662172976a4b",
@@ -3446,9 +2878,7 @@
           "data": {
             "description": "Nft activities",
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BaseNftActivityDto"
-            }
+            "items": { "$ref": "#/components/schemas/BaseNftActivityDto" }
           }
         },
         "required": ["data"]
@@ -3502,15 +2932,12 @@
             "example": "function",
             "description": "function"
           },
-          "amount": {
-            "type": "number",
-            "example": 1,
-            "description": "amount"
-          },
-          "gas": {
-            "type": "number",
-            "example": 1,
-            "description": "gas"
+          "amount": { "type": "number", "example": 1, "description": "amount" },
+          "gas": { "type": "number", "example": 1, "description": "gas" },
+          "logs": {
+            "description": "The logs of the transaction",
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/LogResponseDto" }
           }
         },
         "required": [
@@ -3524,7 +2951,8 @@
           "sentTo",
           "function",
           "amount",
-          "gas"
+          "gas",
+          "logs"
         ]
       },
       "ListTransactionResponseDto": {
@@ -3533,9 +2961,7 @@
           "data": {
             "description": "Array of documents",
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TransactionResponseDto"
-            }
+            "items": { "$ref": "#/components/schemas/TransactionResponseDto" }
           }
         },
         "required": ["data"]
@@ -3586,6 +3012,7 @@
           },
           "arguments": {
             "type": "string",
+            "example": "[\"1000\", \"10\"]",
             "description": "arguments"
           }
         },
@@ -3607,9 +3034,7 @@
           "data": {
             "description": "Array of documents",
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TxPayloadResponseDto"
-            }
+            "items": { "$ref": "#/components/schemas/TxPayloadResponseDto" }
           }
         },
         "required": ["data"]
@@ -3682,9 +3107,7 @@
           "data": {
             "description": "Array of documents",
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TxSignatureResponseDto"
-            }
+            "items": { "$ref": "#/components/schemas/TxSignatureResponseDto" }
           }
         },
         "required": ["data"]
@@ -3763,9 +3186,7 @@
           "data": {
             "description": "Array of documents",
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TxChangeResponseDto"
-            }
+            "items": { "$ref": "#/components/schemas/TxChangeResponseDto" }
           }
         },
         "required": ["data"]
@@ -3843,9 +3264,7 @@
           "data": {
             "description": "Array of documents",
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CoinResponseDto"
-            }
+            "items": { "$ref": "#/components/schemas/CoinResponseDto" }
           }
         },
         "required": ["data"]
@@ -3954,13 +3373,16 @@
           "data": {
             "description": "Array of documents",
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CoinActivityResponseDto"
-            }
+            "items": { "$ref": "#/components/schemas/CoinActivityResponseDto" }
           }
         },
         "required": ["data"]
       }
     }
+  },
+  "x-readme": {
+    "explorer-enabled": true,
+    "proxy-enabled": true,
+    "samples-enabled": true
   }
 }
